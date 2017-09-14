@@ -1,0 +1,168 @@
+/* Default Styling for Webpage */
+body {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Header Styling - Concepts to know:
+
+display: flex; creates a flexbox and shifts nav link section to the immediate right of the image.
+
+justify-content: space-between; creates equal space between the header img and the header links, thus shifting the links to the right margin of the flexbox.
+
+position: fixed; keeps header fixed at the top of the browser when scrolling.
+
+align-items: center; aligns the img and the links in the vertical center of the flexbox.
+
+top: 0; keeps header at the very top of browser, eliminating the issue of body content appearing at the top of the header while scrolling (although I don't really know why that is?) */
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid seashell;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  top: 0;
+}
+
+/* Header Image Styling */
+header img {
+  height: 50px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 9px;
+}
+
+/*Header Links Styling */
+header a{
+  text-decoration: underline;
+  color: seashell;
+  padding-right: 20px;
+}
+
+/*Section Styling - Makes all sections into flexboxes */
+section {
+  display: flex;
+}
+
+/*Mission Section Background Image and Styling
+  Note: Unsure what background-size: cover; and flex: 1; does that makes this work, but it does :-) Please assist in my understanding*/
+#mission {
+  background-image: url('../pictures/img-mission-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex: 1;
+  height: 700px;
+  width: 1200px;
+  padding-top: 70px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/*Flex-Container for the Mission, Tea of the Month and Location Sections - Concepts to know:
+
+display: flex puts the Tea of the Month imgs and their associated descriptions in the same flexbox
+
+justify-content: center; centers the flexboxes in the Tea of the Month section
+
+flex-wrap: wrap; wraps the flexboxes in the Tea of the month section within the confines of the Mission Section Parameters set in #mission above.
+ */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*Mission Section Content Styling - Concept to know:
+  align-self: center; seems to vertically center the content on the image in a similar fashion to how align-items: center; vertically centered the img and links in the header section*/
+#mission .content {
+  align-self: center;
+  background-color: black;
+  width: 100%;
+}
+
+/*Setting the area of the Tea of the Month section */
+#tea-month {
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+/*Tea of the Month Item imgs Styling */
+.item img {
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+}
+
+/*Locations Section Styling */
+#locations {
+  background-image: url('../pictures/img-locations-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 100px 30px 0 30px;
+  width: 100%;
+  height: 500px;
+  padding-top: 70px;
+}
+
+/*Locations h2 Styling*/
+#locations h2 {
+  padding: 10px;
+}
+
+/*Locations List General Styling - Concepts to Understand
+display: flex; creates a single linear flexbox for the three locations.
+
+justify-content: center; centers the three locations in question in the center of the location-list flexbox.*/
+.locations-list {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+/*Locations Styling - Concepts to Know
+
+display: flex; breaks the location-list flex box into three flexboxes by location.
+
+justify-content: center; vertically centers and equal spaces the content in the location flexboxes
+
+flex-direction: column; Turns the content from a row-based format to a column-based format in the location flexboxes.
+
+flex-basis: 280px; expanded the location flexboxes to 280px in width.*/
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 280px;
+  background-color: black;
+  opacity: 1;
+  margin: 0px 20px;
+  padding: 10px;
+}
+
+/*Top Footer Section Styling*/
+.footer-1 {
+  height: 200px;
+}
+
+.footer-1 h5 {
+  font-weight: bold;
+}
+
+.footer-1 h2 {
+  padding-bottom: 20px;
+}
+
+/*Bottom Footer Section Styling*/
+.footer-2 {
+  text-align: left;
+  margin-left: 20px;
+}
